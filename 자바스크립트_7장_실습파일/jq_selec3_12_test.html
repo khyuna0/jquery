@@ -6,7 +6,10 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
-
+	$("h2").replaceWith("<h3>replace 사용</h3>"); 
+	// h2 태그 내용 교체 -> h2 요소 제거 후 다시 교체
+	$("<p>Change 변경됨</p>").replaceAll("div");
+	// 한꺼번에 모든 태그의 요소를 변경할 때
 });
 </script>
 </head>

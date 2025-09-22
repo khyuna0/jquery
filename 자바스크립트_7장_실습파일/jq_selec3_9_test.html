@@ -6,7 +6,9 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
-
+	$("#wrap p:eq(2)").after("<p>After</p>"); // 내용 3 다음 문자열 넣기
+	$("<p>insertAfter</p>").insertAfter("#wrap p:eq(1)"); // 내용 2 (인덱스 1) 다음
+	$("<p>insertBefore</p>").insertBefore("#wrap p:eq(0)");
 });
 </script>
 </head>

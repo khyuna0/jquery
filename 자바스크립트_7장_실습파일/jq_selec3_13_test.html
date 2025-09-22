@@ -6,7 +6,11 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
-
+	$("strong").unwrap(); // 상위 태그 요소 삭제
+	$(".ct1").wrap("<div/>"); 
+	// 클래스 ct1을 <div>요소로 감싸기 -> 상위 태그를 클래스마다 각각 생성
+	$(".ct2").wrapAll("<div/>"); // 모든 .ct2 클래스들을 하나의 div로 생성
+	$("li").wrapInner("<h3/>"); // li의 하위 요소(값)를 h3태그로 모두 감싸기 
 });
 </script>
 <style>
