@@ -6,7 +6,14 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
-
+	// 마우스 포인터가 부모 -> 자식으로 이동해도 이벤트 발생
+	$("#box_1").on("mouseout", function() {
+		$("#box_1").css("background-color","yellow")
+	});
+	// 마우스 포인터가 본인 요소 자체를 완전 벗어날 때만 이벤트 발생
+	$("#box_2").on("mouseleave", function() {
+		$("#box_2").css("background-color","pink")
+	});
 });
 </script>
 </head>

@@ -6,7 +6,18 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	// 새로 등록된 요소에는 이벤트 등록 불가
+	$(".btn_1.on").on("mouseover focus" ,function(){
+		alert("안녕");
+	});
 
+	$(".btn_1").addClass("on");
+
+	// 새로 등록된 요소는 라이브 이벤트 등록 방식으로 등록한다
+	$(document).on("mouseover focus", ".btn_2.on" , function() {
+		alert("감사");
+	})
+	$(".btn_2").addClass("on");
 });
 </script>
 </head>

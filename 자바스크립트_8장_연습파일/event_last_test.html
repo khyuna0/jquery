@@ -12,6 +12,19 @@
 $(function(){
 	var baseFontSize = 14;
 
+	$(".zoomBtnZone button").on("click", zoomInOut);
+	function zoomInOut() {
+		if($(this).hasClass("zoomOutBtn")) { // 참이면 - 버튼 클릭
+			baseFontSize--;
+		} else if ($(this).hasClass("zoomInBtn")) { // 참이면 + 버튼 클릭
+			baseFontSize++;
+		} else { // 100% 버튼 클릭
+			baseFontSize = 14;
+		}
+
+		$(".fontSize").text(baseFontSize+"px");
+		$("#wrap").css("fontSize", baseFontSize+"px")
+	};
 });
 </script>
 </head>
